@@ -17,3 +17,27 @@ The kind of questions, that researchers typically have, that we aim to resolve i
 > We anticipate that the best features yet to be built will emerge through iterative feed- back, deployment, and usage in the broader reinforcement learning and interpretability research communities.
 
 To this end, we do not focus on just MBRL/online RL, but transfer from [simple_rl](https://github.com/david-abel/simple_rl/tree/master/simple_rl) for classic MDP based as well as methods specifically targetting continual reinforcement learning. We wish to package this hopefully valuable tool as a python package and subsequently a jupyter notebook widget with real-time updates.
+
+# Policy Visualizer
+
+A Python package for visualizing policy performance and t-SNE of state-action pairs.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install policy_visualizer
+```
+
+## Usage
+
+```python
+from policy_visualizer import PolicyVisualizer
+
+# Example usage
+visualizer = PolicyVisualizer(checkpoint_path='path/to/checkpoints', 
+                               env_name='CartPole-v1', 
+                               agent_class=YourAgentClass)
+visualizer.plot_all()
+```
